@@ -8,8 +8,8 @@ for i in numbers:
     write_file.writelines(f'{string}\n')
     print(string)
 with open('file.txt', 'r') as read_file:
-    for g in range(-n, n+1):
-        read_string = read_file.readline()
+    for g in numbers:
+        read_string = read_file.read()
         print(read_string)
 
     
