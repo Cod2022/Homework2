@@ -3,16 +3,20 @@
 n = int(input('Введите число: '))
 numbers = list(range(-n, n+1))
 write_file = open('file.txt', 'w')
+print('Исходный список: ')
 for i in numbers:
     string = str(numbers[i-n-1])
     write_file.writelines(f'{string}\n')
     print(string)
-with open('file.txt', 'r') as read_file:
-    for g in range(-n, n+1):
-        read_file.read()
-        positions = int(read_file)
-        print(positions)
 
+print('Результат перемножения элементов:')
+result = 1
+with open('file.txt', 'r') as read_file:
+    for g in range(0, n*2):
+        pos = int(g)
+        result *= numbers[pos]
+        text = read_file.readlines()
+print(result)
     
     
     
