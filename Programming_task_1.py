@@ -8,8 +8,7 @@ def summa(x):                            #Функция нахождения с
     number = 0
 
     for i in str(x):
-        if i != '.':
-            number += int(i)
+        number = number + int(i)
     return number
 
    
