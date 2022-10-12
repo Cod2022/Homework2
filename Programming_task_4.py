@@ -5,3 +5,6 @@ numbers = list(range(-n, n+1))
 # for i in range(-n, n+1):
     # print(i)
 print(numbers)
+with open('file.txt', 'a') as positions:
+    positions.write()
+print(positions)
