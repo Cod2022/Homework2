@@ -3,11 +3,14 @@
 n = int(input('Введите число: '))
 numbers = list(range(-n, n+1))
 write_file = open('file.txt', 'w')
-read_file = open('file.txt', 'r')
 for i in numbers:
     string = str(numbers[i-n-1])
     write_file.writelines(f'{string}\n')
     print(string)
+with open('file.txt', 'r') as read_file:
+    for g in range(-n, n+1):
+        read_string = read_file.readline()
+        print(read_string)
 
     
     
