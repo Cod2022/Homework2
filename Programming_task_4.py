@@ -2,10 +2,11 @@
 # Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
 n = int(input('Введите число: '))
 numbers = list(range(-n, n+1))
-file = open('file.txt', 'w')
+write_file = open('file.txt', 'w')
+read_file = open('file.txt', 'r')
 for i in numbers:
     string = str(numbers[i-n-1])
-    file.writelines(f'{string}\n')
+    write_file.writelines(f'{string}\n')
     print(string)
 
     
